@@ -1,25 +1,30 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Contador from './Contador';
+import LabelCronometro from './LabelCronometro';
+import Botao from './Botao';
+import Menu from './Menu';
+import Relogio from './Relogio';
+import Timer from './Temporizadorteste1';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Menu />
+    <LabelCronometro name="Cronometro"/>
+    <Contador/>
+    <h1>Relogio</h1>
+    <Relogio/>
+    <h1>Temporizador</h1>
+    <Timer/>
+    
+    
+    
+    
     </div>
+    //dentro do div acima <Botao onClick={() => this.zerarCronometro()} label="zerar"/>
+    
   );
 }
 

@@ -7,6 +7,26 @@
   pointer-events: none;
 }
 
+.navbar{
+  color: aqua;
+}
+
+.menu{ 
+  color: black;
+
+}
+
+.form-control{
+  width: 80px;
+  display: inline;
+  font-size: 30px;
+}
+
+.my-title {
+  color: brown;
+  
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
