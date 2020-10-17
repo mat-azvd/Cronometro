@@ -9,11 +9,20 @@ import Relogio from './Relogio';
 import Timer from './Temporizadorteste1';
 import {Link} from 'react-router-dom';
 
-function App() {
+function AppRelogio() {
   return (
+
     <div class="background" >
     
       <div id="principal">
+
+        
+
+        <div id="menucontador" key="Contador"> 
+          <Link to={"/"}>
+          <LabelCronometro name="Cronometro"/>
+          </Link>
+        </div>
 
         <div id="menutemporizador" key="Temporizador"> 
           <Link to={"/timer"}>
@@ -21,15 +30,9 @@ function App() {
           </Link>
         </div>
 
-        <div id="menurelogio" key="Relogio"> 
-          <Link to={"/relogio"}>
-          <LabelCronometro name="Relogio"/>
-          </Link>
-        </div>
-
-        <div id="Cronometro">
-        <LabelCronometro name="Cronometro"/>
-          <Contador/>
+        <div id="Relogio">
+        <LabelCronometro name="Relogio"/>
+          <Relogio/>
           
         </div>
 
@@ -41,4 +44,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRelogio;

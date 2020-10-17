@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Botao from './Botao';
 
+
 class Contador extends React.Component {
 
     constructor(props) {
