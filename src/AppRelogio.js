@@ -15,8 +15,7 @@ function AppRelogio() {
     <div class="background" >
     
       <div id="principal">
-
-        
+       
 
         <div id="menucontador" key="Contador"> 
           <Link to={"/"}>

@@ -11,7 +11,7 @@ class Relogio extends React.Component {
       }
 
       hora() {
-        return Moment().format('hh:mm:ss');
+        return Moment().format('HH:mm:ss');
        }
     
        componentDidMount(){
@@ -23,7 +23,10 @@ class Relogio extends React.Component {
     render() {
         return(
             <div class="estilo">
-            <h1> {Moment().format('h:mm:s')} </h1>
+
+              <div id="relogiohoras"> {Moment().format('HH:mm')}  </div>
+              <div id="relogiosegundos"> {Moment().format(':ss')}</div> 
+            <h1>--</h1>
             <select class="selectpicker" data-live-search="true"></select>
            
             </div>
