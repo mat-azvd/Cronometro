@@ -10,14 +10,14 @@ import Timer from './Temporizadorteste1';
 
 function App() {
   return (
-    <div>
+    <div class="background">
     <Menu />
     <LabelCronometro name="Cronometro"/>
     <Contador/>
-    <h1>Relogio</h1>
+    <h1 class='my-title'>Relogio</h1>
     <Relogio/>
 
-    <h1>Temporizador</h1>
+    <h1 class='my-title'>Temporizador</h1>
     <Timer/>
     
     

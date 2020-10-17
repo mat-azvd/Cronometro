@@ -112,7 +112,8 @@ export default class Timer extends Component {
         const {horas, minutos, segundos, fim } = this.state
         return (
             <div class="estilo">
-                 <input 
+                 <input
+                    id="temporizador" 
                     type="number" 
                     onChange={this.alterarHoras}
                     // < 10 ? `0${this.state.horas}` : this.state.horas
@@ -120,6 +121,7 @@ export default class Timer extends Component {
                     max="24" min="0"
                     placeholder="00" class="form-control"></input>
                 <input 
+                    id="temporizador" 
                     type="number" 
                     // < 10 ? `0${this.state.minutos}` : this.state.minutos}
                     onChange={this.alterarMinutos}
@@ -129,6 +131,7 @@ export default class Timer extends Component {
                 </input>
 
                 <input 
+                    id="temporizador" 
                     type="number" 
                     onChange={this.alterarSegundos}
                     // < 10 ? `0${this.state.segundos}` : this.state.segundos
@@ -140,8 +143,10 @@ export default class Timer extends Component {
                     ? <h1>Fim!</h1>
                 : <h1>{horas}:{minutos < 10 ? `0${minutos }` : minutos }:{segundos < 10 ? `0${segundos}` : segundos}</h1>
                 }
+                <div >
                 <Botao onClick={() => {this.pararTemporizador()}} label= {this.state.namePlay}/>
                 <Botao onClick={() => {this.zerarTemporizador()}} label="zerar"/>
+                </div>
             </div>
         )
     }
