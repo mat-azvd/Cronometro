@@ -11,7 +11,8 @@ export default class Timer extends Component {
             segundos: 0,
             minutos: 0,
             play: false,
-            namePlay: "Play"
+            namePlay: "Play",
+            fim: "inicio"
         }
     }
 
@@ -19,7 +20,7 @@ export default class Timer extends Component {
         this.myInterval = setInterval(() => {
             const {horas, segundos, minutos } = this.state
 
-            if(this.state.play==true){
+            if(this.state.play===true){
 
             if (segundos > 0) {
                 this.setState(({ segundos }) => ({
@@ -36,8 +37,11 @@ export default class Timer extends Component {
             }
             if (segundos === 0) {
                 if (minutos === 0) {
-                    if (horas === 0 ) {
-                    clearInterval(this.myInterval)
+                    if (horas === 0 ) { 
+                    this.setState({play: false});
+                    this.setState({namePlay: "Play"});
+                    this.setState({fim: "fim"});
+                    
                 } else {
                     this.setState(({ horas }) => ({
                         horas: horas - 1,
@@ -58,13 +62,15 @@ export default class Timer extends Component {
 
     pararTemporizador(){
         const {horas, segundos, minutos } = this.state
+        
         if (segundos !== 0 | minutos !== 0 | horas !== 0)  {
           
         this.setState({play: !this.state.play})
-
+        this.setState({fim: "inicio"});
         if(this.state.play){this.setState({namePlay: "Play"})
         }
         else {this.setState({namePlay: "Stop"})
+        this.setState({play: !this.state.play})
         }
 
     }
@@ -76,7 +82,8 @@ export default class Timer extends Component {
         segundos: 0,
         minutos: 0,
         play: false,
-        namePlay: "Play"
+        namePlay: "Play",
+        fim: "inicio"
 
     })
     }
@@ -92,7 +99,7 @@ export default class Timer extends Component {
     
 
     render() {
-        const {horas, minutos, segundos } = this.state
+        const {horas, minutos, segundos, fim } = this.state
         return (
             <div>
                  <input 
@@ -116,7 +123,7 @@ export default class Timer extends Component {
                     value={this.state.segundos}
                     placeholder="00" class="form-control"/>
                
-                {horas === 0 && minutos === 0 && segundos === 0
+                {horas === 0 && minutos === 0 && segundos === 0 && fim === "fim"
                     ? <h1>Fim!</h1>
                 : <h1>{horas}:{minutos < 10 ? `0${minutos }` : minutos }:{segundos < 10 ? `0${segundos}` : segundos}</h1>
                 }
