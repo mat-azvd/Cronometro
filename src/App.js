@@ -16,10 +16,9 @@ function App() {
     <Contador/>
     <h1>Relogio</h1>
     <Relogio/>
+
     <h1>Temporizador</h1>
     <Timer/>
-    
-    
     
     
     </div>

@@ -83,12 +83,13 @@ class Contador extends React.Component {
     render() {
         return(
             
-            <div>
-            <h1> {this.state.minutos < 10 ? `0${this.state.minutos}` : this.state.minutos}:
-            {this.state.segundos < 10 ? `0${this.state.segundos}` : this.state.segundos}:
-            {this.state.milisegundos < 10 ? `0${this.state.milisegundos}` : this.state.milisegundos} </h1>
-            <Botao onClick={() => {this.pararCronometro()}} label= {this.state.namePlay}/>
+            <div class="estilo" >
+            <div id="horas"> {this.state.minutos < 10 ? `0${this.state.minutos}` : this.state.minutos}:
+            {this.state.segundos < 10 ? `0${this.state.segundos}` : this.state.segundos}</div>
+            <div id="milisegundos">:{this.state.milisegundos < 10 ? `0${this.state.milisegundos}` : this.state.milisegundos}</div>
+            <div id="botao"><Botao onClick={() => {this.pararCronometro()}} label= {this.state.namePlay}/>
             <Botao onClick={() => {this.zerarCronometro()}} label="zerar"/>
+            </div>
 
             </div>
             )

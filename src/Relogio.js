@@ -22,9 +22,12 @@ class Relogio extends React.Component {
     
     render() {
         return(
-            <div>
+            <div class="estilo">
             <h1> {Moment().format('h:mm:s')} </h1>
+            <select class="selectpicker" data-live-search="true"></select>
+           
             </div>
+            
             )
             
     }

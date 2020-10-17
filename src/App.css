@@ -16,6 +16,51 @@
 
 }
 
+.estilo{
+  
+  color: yellow;
+  overflow: hidden;
+  
+  
+  border-style: double; 
+  border-color: rgb(255, 251, 0);
+  width: 50%;
+  height: 50%;
+
+  text-align: center;
+  
+  margin-left: 25%;
+  background-color: black;
+  border-radius: 25px;
+  border-width: 15px;
+  font-family: 'Orbitron';
+}
+
+#horas{
+  width: 50%;
+  position: relative;
+  font-size: 50px;
+  display:inline-block;
+  padding-right: 0;
+  text-align: right;
+}
+
+#milisegundos{
+  text-align: left;
+  width: 25%;
+  position: relative;
+  padding-right: 0px;
+  font-size: 20px;
+  display:inline-block;
+  color: aqua;
+}
+
+#botao{
+  
+}
+
+
+
 .form-control{
   width: 80px;
   display: inline;

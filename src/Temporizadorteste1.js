@@ -96,23 +96,35 @@ export default class Timer extends Component {
     alterarSegundos = (event) => {
         this.setState({segundos: event.target.value}) 
     }
+
+    limitarValor(){
+        if(this.state.minutos > 59){
+            this.setState({minutos: 59})
+        } else if (this.state.minutos < 0){
+            this.setState({minutos: 0})
+        } else {
+            this.setState({minutos: this.state.minutos})
+        }
+    }
     
 
     render() {
         const {horas, minutos, segundos, fim } = this.state
         return (
-            <div>
+            <div class="estilo">
                  <input 
                     type="number" 
                     onChange={this.alterarHoras}
                     // < 10 ? `0${this.state.horas}` : this.state.horas
                     value={this.state.horas} 
+                    max="24" min="0"
                     placeholder="00" class="form-control"></input>
                 <input 
                     type="number" 
                     // < 10 ? `0${this.state.minutos}` : this.state.minutos}
                     onChange={this.alterarMinutos}
-                    value={this.state.minutos}                   
+                    value={this.state.minutos}
+                    max="59" min="0"                 
                     placeholder="00" class="form-control">
                 </input>
 
@@ -121,6 +133,7 @@ export default class Timer extends Component {
                     onChange={this.alterarSegundos}
                     // < 10 ? `0${this.state.segundos}` : this.state.segundos
                     value={this.state.segundos}
+                    max="59" min="0" 
                     placeholder="00" class="form-control"/>
                
                 {horas === 0 && minutos === 0 && segundos === 0 && fim === "fim"
