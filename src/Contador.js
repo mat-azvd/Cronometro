@@ -67,7 +67,9 @@ class Contador extends React.Component {
         this.setState({
             milisegundos: 0,
             segundos: 0,
-            minutos: 0
+            minutos: 0,
+            play: false,
+            namePlay: "Play"
 
         })
     }

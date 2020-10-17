@@ -7,7 +7,7 @@ class Temporizador extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            milisegundos: 0,
+            horas: 0,
             segundos: 0,
             minutos: 0,
             horas: 0,
