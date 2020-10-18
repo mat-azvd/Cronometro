@@ -138,6 +138,11 @@
   color: aqua;
 }
 
+#timezone{
+  width: 70%;
+  background-color: black;
+  color: yellow;
+}
 
 
 .form-control{
